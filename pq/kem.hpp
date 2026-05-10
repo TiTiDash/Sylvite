@@ -103,7 +103,7 @@ namespace XWing {
 /// @brief X-Wing public key size (1,568 bytes).
 static constexpr std::size_t PUBLIC_KEY_SIZE = crypto_kem_PUBLICKEYBYTES;
 
-/// @brief X-Wing secret key size (2,352 bytes).
+/// @brief X-Wing secret key size (32 bytes).
 static constexpr std::size_t SECRET_KEY_SIZE = crypto_kem_SECRETKEYBYTES;
 
 /// @brief X-Wing shared secret size (32 bytes).
@@ -259,6 +259,9 @@ static constexpr std::size_t SHARED_KEY_SIZE = crypto_kem_mlkem768_SHAREDSECRETB
 
 /// @brief ML-KEM-768 ciphertext size (1,088 bytes).
 static constexpr std::size_t CIPHERTEXT_SIZE = crypto_kem_mlkem768_CIPHERTEXTBYTES;
+
+/// @brief ML-KEM768 seed size (32 bytes).
+static constexpr std::size_t SEED_SIZE = crypto_kem_mlkem768_SEEDBYTES;
 
 /**
  * @brief Generate an ML-KEM-768 KEM key pair.
