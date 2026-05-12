@@ -97,12 +97,12 @@ struct KeyPair {
     sylvite::types::PublicKey public_key;   ///< The public key — can be shared freely.
     sylvite::types::PrivateKey secret_key; ///< The secret key — keep private and wipe after use.
     void resize_to_XWing_sizes() {
-        public_key.resize(sylvite::kem::XWing::PUBLIC_KEY_SIZE);
-        secret_key.resize(sylvite::kem::XWing::SECRET_KEY_SIZE);
+        public_key.resize(1216);
+        secret_key.resize(32);
     }
     void resize_to_MlKem768_sizes() {
-        public_key.resize(sylvite::kem::MlKem768::PUBLIC_KEY_SIZE);
-        secret_key.resize(sylvite::kem::MlKem768::SECRET_KEY_SIZE);
+        public_key.resize(1184);
+        secret_key.resize(2400);
     }
 };
 
