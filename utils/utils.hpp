@@ -72,8 +72,8 @@ void memory_compare(std::span<const T> A_, std::span<const U> B_) {
     if (sodium_memcmp(A_.data(), B_.data(), A_.size()) != 0) throw sylvite::exceptions::SodiumRuntimeError("Buffers mismatch.");
 }
 
-template<typename T>
-void memory_zero(std::span<const T> buffer_) {
+template<sylvite::concepts::ContiguousByteContainer T>
+void memory_zero(T& buffer_) {
     sodium_memzero(buffer_.data(), buffer_.size());
 }
 
